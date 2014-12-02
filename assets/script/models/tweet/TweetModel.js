@@ -4,34 +4,41 @@ define([
 ], function(_, Backbone) {
 
   var TweetModel = Backbone.Model.extend({
-
-  		defaults : {
-        'id': 0,
-        'archived': false,
-        'complete': false,
+      defaults : {
         'created_at': '',
-        'text': '',
+        'is_archived': false,
+        'is_complete': false,
         'name': '',
-        'screen_name': '',
         'profile_image_url': '',
-        'profile_url': '#'
-      },  
+        'screen_name': '',
+        'text': ''
+      },
 
-      initialize: function( options ) {
-  			this.query = options.query; 
-  		},
+      initialize: function() {},
 
-		url : function() {
-	        return 'https://api.github.com/users/' + this.query;
-	    },
-	    
-	    parse : function(res) { 
-        // because of jsonp 
-	        return res.data;
-	    }
+      created_at_formatted : function() {
+        var created_at_formatted = '';
+        if(this.created_at !== '') {
+          var created_at_date = new Date(this.created_at);
+          created_at_formatted = created_at_date.getDate()+'/'+
+                                    (created_at_date.getMonth()+1)+'/'+
+                                    created_at_date.getFullYear();
+          }
+        return created_at_formatted;
+      },
+      profile_url : function() {
+        return 'http://www.twitter.com/' + this.screen_name;
+      },
+      
+      toggleArchive: function(){
+        this.set({is_archived: !is_archived});
+      },
+      toggleComplete: function(){
+        this.set({is_complete: !is_complete});
+      },
 
     });
 
-  	return OwnerModel;
+    return TweetModel;
 
 });

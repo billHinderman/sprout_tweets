@@ -2,11 +2,12 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/home/HomeView',
-  'views/projects/ProjectsView',
-  'views/contributors/ContributorsView',
-  'views/footer/FooterView'
-], function($, _, Backbone, HomeView, ProjectsView, ContributorsView, FooterView) {
+  'assets/script/views/component/HeaderView.js',
+  'assets/script/views/component/NavView.js',
+  'assets/script/views/component/FooterView.js',
+  'assets/script/views/home/HomeView.js',
+  'assets/script/views/tweet/TweetsView.js',
+], function($, _, Backbone, HeaderView, NavView, FooterView, HomeView, TweetsView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -22,26 +23,12 @@ define([
   var initialize = function(){
 
     var app_router = new AppRouter;
-    
-    app_router.on('route:showProjects', function(){
-   
-        // Call render on the module we loaded in via the dependency array
-        var projectsView = new ProjectsView();
-        projectsView.render();
-
-    });
-
-    app_router.on('route:showContributors', function () {
-    
-        // Like above, call render but know that this view has nested sub views which 
-        // handle loading and displaying data from the GitHub API  
-        var contributorsView = new ContributorsView();
-    });
 
     app_router.on('route:defaultAction', function (actions) {
      
        // We have no matching route, lets display the home page 
-        var homeView = new HomeView();
+
+        var homeView = new TweetsView();
         homeView.render();
     });
 
@@ -49,6 +36,8 @@ define([
     // the render call internally after it loads data. Further more we load it
     // outside of an on-route function to have it loaded no matter which page is
     // loaded initially.
+    var headerView = new HeaderView();
+    var navView = new NavView();
     var footerView = new FooterView();
 
     Backbone.history.start();

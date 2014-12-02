@@ -1,13 +1,27 @@
 Sprout Tweets List
 =============
-Goal
+Table of Contents
+---
+1. Goal
+2. Features
+3. Deviations from wireframe
+4. Technologies used
+5. Directory structure
+
+1. Goal
 ---
 
-Features
+2. Features
 ---
 
-Deviations from wireframe
+3. Deviations from wireframe
 ---
 
-Technologies used
+4. Technologies used
 ---
+
+* BackboneJS
+* jQuery
+* RequireJS
+* SASS
+* UnderscoreJS
