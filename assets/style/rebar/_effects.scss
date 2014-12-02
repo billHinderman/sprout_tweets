@@ -1,0 +1,288 @@
+@-moz-keyframes colorloop /* Firefox */ {
+  0%   {color:$s-blue;}
+  25%  {color:$v-aqua;}
+  50%  {color:$v-blue;}
+  75%  {color:$v-aqua;}
+  100%  {color:$s-blue;}
+} 
+@-webkit-keyframes colorloop /* Webkit */ {
+  0%   {color:$s-blue;}
+  25%  {color:$v-aqua;}
+  50%  {color:$v-blue;}
+  75%  {color:$v-aqua;}
+  100%  {color:$s-blue;}
+}
+
+
+@-moz-keyframes bgloop /* Firefox */ {
+  0%   {background:$s-blue;}
+  25%  {background:$v-aqua;}
+  50%  {background:$v-blue;}
+  75%  {background:$v-aqua;}
+  100%  {background:$s-blue;}
+} 
+@-webkit-keyframes bgloop /* Webkit */ {
+  0%   {background:$s-blue;}
+  25%  {background:$v-aqua;}
+  50%  {background:$v-blue;}
+  75%  {background:$v-aqua;}
+  100%  {background:$s-blue;}
+}
+
+@keyframes contentIn {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: -320px;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes contentIn {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: -320px;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes contentOut {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: -320px;
+  }
+}
+
+@-webkit-keyframes contentOut {
+  0% {
+    @include hardwareAccelerate();
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -320px;
+  }
+  100% {
+    margin-left: -320px;
+  }
+}
+
+
+@keyframes sidebarIn {
+  0% {
+    @include hardwareAccelerate();
+    right: 320px;
+  }
+  75% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes sidebarIn {
+  0% {
+    @include hardwareAccelerate();
+    right: 320px;
+  }
+  75% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes sidebarOut {
+  0% {
+    @include hardwareAccelerate();
+    right: 0;
+  }
+  25% {
+    right: 0;
+  }
+  100% {
+    right: 320px;
+  }
+}
+
+@-webkit-keyframes sidebarOut {
+  0% {
+    @include hardwareAccelerate();
+    right: 0;
+  }
+  25% {
+    right: 0;
+  }
+  100% {
+    right: 320px;
+  }
+}
+
+
+//pull top up
+@keyframes ani-1 {
+  9%{width:4px;height:4px;margin-top:-12px;}
+  13%,17%{width:4px;height:4px;margin-top:-8px;}
+  33%{width:48px;margin-top:-8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  37%,55%{width:32px;margin-top:-8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  62%,85%{width:32px;margin-top:0;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+  89%{width:48px;}
+  98%,100%{width:4px;height:4px;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+}
+@-webkit-keyframes ani-1 {
+  9%{width:4px;height:4px;margin-top:-12px;}
+  13%,17%{width:4px;height:4px;margin-top:-8px;}
+  33%{width:48px;margin-top:-8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  37%,55%{width:32px;margin-top:-8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  62%,85%{width:32px;margin-top:0;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+  89%{width:48px;}
+  98%,100%{width:4px;height:4px;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+}
+
+//strech middle
+@keyframes ani-2 {
+  9%{width:4px;height:4px;}
+  13%,17%{width:4px;height:4px;}
+  34%{width:48px;}
+  38%,85%{width:32px;}
+  89%{width:48px;}
+  98%,100%{width:4px;height:4px;}
+}
+@-webkit-keyframes ani-2 {
+  9%{width:4px;height:4px;}
+  13%,17%{width:4px;height:4px;}
+  34%{width:48px;}
+  38%,85%{width:32px;}
+  89%{width:48px;}
+  98%,100%{width:4px;height:4px;}
+}
+
+//push bottom down
+@keyframes ani-3 {
+  9%{width:4px;height:4px;margin-top:12px;}
+  13%,17%{width:4px;height:4px;margin-top:8px;}
+  35%{width:48px;margin-top:8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  39%,55%{width:32px;margin-top:8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  62%,85%{width:32px;margin-top:0;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+  89%{width:48px;}
+  98%,100%{width:4px;height:4px;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+}
+@-webkit-keyframes ani-3 {
+  9%{width:4px;height:4px;margin-top:12px;}
+  13%,17%{width:4px;height:4px;margin-top:8px;}
+  35%{width:48px;margin-top:8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  39%,55%{width:32px;margin-top:8px;@include transform(translate3D(-50%,-50%,0) rotate(0deg));}
+  62%,85%{width:32px;margin-top:0;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+  89%{width:48px;}
+  98%,100%{width:4px;height:4px;@include transform(translate3D(-50%,-50%,0) rotate(90deg));}
+}
+
+//rotate to X
+@keyframes ani-4 {
+  69%{@include transform(rotate(0deg));}
+  77%,100%{@include transform(rotate(45deg));}
+}
+@-webkit-keyframes ani-4 {
+  69%{@include transform(rotate(0deg));}
+  77%,100%{@include transform(rotate(45deg));}
+}
+
+
+@keyframes spinner {
+  0% {
+    @include transform(rotate(5deg));
+  }
+  3% {
+    @include transform(rotate(0deg));
+  }
+  10% {
+    @include transform(rotate(0deg));
+  }
+  25% {
+    @include transform(rotate(95deg));
+  }
+  28% {
+    @include transform(rotate(90deg));
+  }
+  35% {
+    @include transform(rotate(90deg));
+  }
+  50% {
+    @include transform(rotate(185deg));
+  }
+  53% {
+    @include transform(rotate(180deg));
+  }
+  65% {
+    @include transform(rotate(180deg));
+  }
+  75% {
+    @include transform(rotate(275deg)); 
+  }
+  78% {
+    @include transform(rotate(270deg)); 
+  }
+  90% {
+   @include transform(rotate(270deg));  
+  }
+  100% {
+    @include transform(rotate(365deg)); 
+  }
+}
+@-webkit-keyframes spinner {
+  0% {
+    @include transform(rotate(5deg));
+  }
+  3% {
+    @include transform(rotate(0deg));
+  }
+  10% {
+    @include transform(rotate(0deg));
+  }
+  25% {
+    @include transform(rotate(95deg));
+  }
+  28% {
+    @include transform(rotate(90deg));
+  }
+  35% {
+    @include transform(rotate(90deg));
+  }
+  50% {
+    @include transform(rotate(185deg));
+  }
+  53% {
+    @include transform(rotate(180deg));
+  }
+  65% {
+    @include transform(rotate(180deg));
+  }
+  75% {
+    @include transform(rotate(275deg)); 
+  }
+  78% {
+    @include transform(rotate(270deg)); 
+  }
+  90% {
+   @include transform(rotate(270deg));  
+  }
+  100% {
+    @include transform(rotate(365deg)); 
+  }
+}

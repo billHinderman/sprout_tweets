@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+
+[data-solari] {
+  display: inline-block;
+  font-family: "Roboto Condensed", $sans;
+  font-size: 1.4em;
+  font-style: normal;
+  line-height: 1.3em;
+  margin: .25em 0;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  .digit {
+    background: $greyMd;
+    border: 1px solid $greyMd;
+    border-radius: .025em;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    display: inline-block;
+    height: 1.25em;
+    margin: 0 .025em;
+    position: relative;
+    width: 1em;
+  }
+  .digit-char {
+    background: $black;
+    border-radius: .025em;
+    box-shadow: 0 0 5px 1px #000 inset;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    color: $white;
+    font-size: inherit;
+    height: 1.25em;
+    line-height: inherit;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    transform-style: preserve-3d;
+    width: 1em;
+  }
+  .digit-top {
+    clip: rect(0, 1em, .635em, 0);
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .digit-bottom {
+    bottom: 0;
+    clip: rect(.675em, 1em, 1.25em, 0);
+    left: 0;
+    z-index: 1;
+  }
+  .digit-space {
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+.digit.animate-3d {
+  .digit-char {
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+  .digit-char.digit-move {
+    -moz-transform: rotateX( 90deg );
+    -ms-transform: rotateX( 90deg );
+    -webkit-transform: rotateX( 90deg );
+    transform: rotateX( 90deg );
+    z-index: 2;
+  }
+}
+[data-solari].black-yellow {
+  .digit-char {
+    color: $yellow;
+  }
+}
+[data-solari].minimal {
+  .digit {
+    background: none;
+    border: none;
+  }
+  .digit-char {
+    background: none;
+    box-shadow: none;
+    color: inherit
+  }
+}
+[data-solari].white-black {
+  .digit {
+    background: $greyDk;
+    border-color: $greyDk;
+  }
+  .digit-char {
+    background: $white;
+    box-shadow: 0 0 5px 1px darken($white,5%) inset;
+    color: $black;
+  }
+}
+[data-solari].white-yellow {
+  .digit {
+    background: $greyDk;
+    border-color: $greyDk;
+  }
+  .digit-char {
+    background: $white;
+    box-shadow: 0 0 5px 1px darken($white,5%) inset;
+    color: $yellow;
+  }
+}
+[data-solari].yellow-black {
+  .digit {
+    background: $greyDk;
+    border-color: $greyDk;
+  }
+  .digit-char {
+    background: $yellow;
+    box-shadow: 0 0 5px 1px darken($yellow,5%) inset;
+    color: $black;
+  }
+}
+[data-solari].yellow-white {
+  .digit {
+    background: $greyDk;
+    border-color: $greyDk;
+  }
+  .digit-char {
+    background: $yellow;
+    box-shadow: 0 0 5px 1px darken($yellow,5%) inset;
+    color: $white;
+  }
+}

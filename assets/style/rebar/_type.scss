@@ -1,0 +1,276 @@
+/************************************************************
+TYPOGRAPHY
+************************************************************/
+
+/******************************
+Default
+******************************/
+body {
+  color: $black;
+  font-family: $sans;
+  font-size: 1em;
+  text-rendering: optimizelegibility;
+}
+
+/******************************
+Font Options
+******************************/
+.f-heading {
+  font-family: $heading;
+}
+.f-mono {
+  font-family: $mono;
+}
+.f-sans {
+  font-family: $sans;
+}
+.f-serif {
+  font-family: $serif;
+}
+
+/******************************
+Headers
+******************************/
+h1, 
+.h1 {
+  font-family: $sans;
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 1.1em;
+  &.three-up {
+    text-transform: uppercase;
+    line-height: .7em;
+    [class^="word"]:after {
+      display: block;
+      content: "";
+    }
+    [class^="word"]:last-of-type {
+      font-weight: 700;
+    }
+    [class^="char"]:nth-of-type(3n):after {
+      display: block;
+      content:"";
+    }
+  }
+}
+h2, 
+.h2 {
+  font-family: $heading;
+  font-size: 2.25em;
+  font-weight: 600;
+  line-height: 1.1em;
+}
+h3, 
+.h3 {
+  font-family: $sans;
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 1.1em;
+}
+h4, 
+.h4 {
+  font-weight: 700;
+  line-height: 1.1em;
+}
+h5, 
+.h5 {
+  font-weight: 300;
+  line-height: 1.1em;
+}
+h6, 
+.h6 {
+  font-size: .75em;
+  line-height: 1.1em;
+}
+
+/******************************
+Copy
+******************************/
+b, 
+.bold {
+  font-weight: 700;
+}
+.light {
+  font-weight: 300;
+}
+.thin {
+  font-weight: 100;
+}
+.italic {
+  font-style: italic !important;
+}
+em {
+ font-style: italic; 
+}
+em.blacken {
+  background: $black;
+  color: $white;
+  font-family: $sans;
+  font-size: .75em;
+  font-style: normal;
+  padding: .1667em;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.large {
+  font-size: 1.5em;
+}
+small, .small {
+  font-size: .75em;
+}
+
+/******************************
+Lists
+******************************/
+ol, 
+ul {
+  padding: 0;
+  &.inline {
+    list-style: none;
+    margin-left: 0;
+    li {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+    }
+  }
+  &.unstyled {
+    list-style: disc;
+    margin-left: 0;
+  }
+  ol, 
+  ul {
+    margin-bottom: 0;
+  }
+}
+ol {
+  list-style: decimal;
+}
+ul {
+  list-style: none;
+}
+dl {
+  margin: .5em 0;
+  dd {
+    margin-left: .5em;
+  }
+  dt {
+    font-weight: 700;
+  }
+}
+.list-title {
+  font-weight: 700;
+  margin-bottom: .25em;
+}
+
+/******************************
+Aside
+******************************/
+aside,
+ .aside {
+  background: $greyLt;
+  color: $black;
+  font-size: .75em;
+  margin-top: 1em;
+  padding: .25em 1em;
+}
+
+/******************************
+Quote
+******************************/
+blockquote, 
+q, 
+.blockquote,
+.quote {
+  font-family: $sans;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 1em .5em;
+  &.callout {
+    border-left: 1px dotted $greyMd;
+    padding-left: .5em;
+  }
+
+  small, .small {
+    font-family: $sans;
+    font-size: .5em;
+    margin-left: 1em;
+  }
+}
+
+/******************************
+Address
+******************************/
+address, 
+.address {
+  margin: .5em 0;
+}
+
+/******************************
+Code
+******************************/
+code, 
+pre,
+.code,
+.pre {
+  display: block;
+  font-family: $mono;
+  font-size: 1.25em;
+  margin: .5em 0;
+
+  &.callout {
+    border: 1px dotted $greyMd;
+    padding: .5em;
+  }
+}
+
+/******************************
+Misc
+******************************/
+.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/******************************
+SBG
+******************************/
+.sbg {
+  background: $black;
+  color: $white;
+  font-family: $sans;
+  font-weight: 100;
+  font-size: 0.75em;
+  padding: 0.1667em;
+  text-transform: uppercase;
+  .char9,
+  .char10,
+  .char11 {
+    font-weight: 700;
+  }
+}
+.c-positive {
+  display: inline-block;
+  font-weight: bold;
+  [class^="char"] {
+    display: inline-block;
+    border: 1px solid $greyMd;
+    font-family: $heading;
+    font-style: normal;
+    padding: .125em;
+    margin: 0 .015em;
+  }
+}
+.c-negative {
+  color: $red;
+  font-family: $serif;
+  font-style: italic;
+  font-weight: normal;
+  padding: .125em;
+}
+

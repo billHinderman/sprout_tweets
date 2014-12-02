@@ -1,0 +1,34 @@
+/************************************************************
+LINKS
+************************************************************/
+/******************************
+Base
+******************************/
+a, .link,
+a:visited, .link:visited {
+  border-bottom: 1px solid transparent;
+  color: $yellow;
+  @include transition(all $transition-static);
+  text-decoration: none;
+  &:active,
+  &:hover {
+    border-color: inherit;
+    color: inherit;
+  }
+
+  &[rel^="external"],
+  &[rel*=" external"],
+  &[target^="blank"],
+  &[target*="blank "],
+  &:not([href*="starbasego.com"]),
+  &:not([href^="/"]),
+  &:not([href^="#"]),
+  &.external {
+    
+  }
+
+  &.link-no-style {
+    border: none !important;
+    color: inherit;
+  }
+}
