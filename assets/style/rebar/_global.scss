@@ -11,22 +11,16 @@ Main
   box-sizing: border-box;
 }
 body {
-  background: $white;
+  background: $greyMd;
   color: $black;
-}
-.container {
-  background: $white;
-  margin: 0 auto;
-  padding: 0 2%;
-  width: 100%;
 }
 ::selection {
-  background: $yellow;
-  color: $black;
+  background: $green;
+  color: $white;
 }
 ::-moz-selection {
-  background: $yellow;
-  color: $black;
+  background: $green;
+  color: $white;
 }
 
 /******************************

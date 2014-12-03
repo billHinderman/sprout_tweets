@@ -16,16 +16,6 @@ define([
 
       initialize: function() {},
 
-      created_at_formatted : function() {
-        var created_at_formatted = '';
-        if(this.created_at !== '') {
-          var created_at_date = new Date(this.created_at);
-          created_at_formatted = created_at_date.getDate()+'/'+
-                                    (created_at_date.getMonth()+1)+'/'+
-                                    created_at_date.getFullYear();
-          }
-        return created_at_formatted;
-      },
       profile_url : function() {
         return 'http://www.twitter.com/' + this.screen_name;
       },

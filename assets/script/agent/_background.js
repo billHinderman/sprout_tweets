@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-  $("*[data-bg-image]").each( function() {
+  $("*[data-bg]").each( function() {
   $(this).css(
       {
         "background":"url('"+$(this).data("bg-image")+"')",

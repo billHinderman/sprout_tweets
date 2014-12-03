@@ -10,6 +10,7 @@ body {
   font-family: $sans;
   font-size: 1em;
   text-rendering: optimizelegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /******************************
@@ -31,140 +32,41 @@ Font Options
 /******************************
 Headers
 ******************************/
-h1, 
-.h1 {
-  font-family: $sans;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+
+}
+
+h1, .h1 {
   font-size: 3em;
-  font-weight: 100;
-  line-height: 1.1em;
-  &.three-up {
-    text-transform: uppercase;
-    line-height: .7em;
-    [class^="word"]:after {
-      display: block;
-      content: "";
-    }
-    [class^="word"]:last-of-type {
-      font-weight: 700;
-    }
-    [class^="char"]:nth-of-type(3n):after {
-      display: block;
-      content:"";
-    }
-  }
-}
-h2, 
-.h2 {
-  font-family: $heading;
-  font-size: 2.25em;
-  font-weight: 600;
-  line-height: 1.1em;
-}
-h3, 
-.h3 {
-  font-family: $sans;
-  font-size: 1.5em;
-  font-weight: 100;
-  line-height: 1.1em;
-}
-h4, 
-.h4 {
-  font-weight: 700;
-  line-height: 1.1em;
-}
-h5, 
-.h5 {
-  font-weight: 300;
-  line-height: 1.1em;
-}
-h6, 
-.h6 {
-  font-size: .75em;
-  line-height: 1.1em;
 }
 
-/******************************
-Copy
-******************************/
-b, 
-.bold {
-  font-weight: 700;
-}
-.light {
-  font-weight: 300;
-}
-.thin {
-  font-weight: 100;
-}
-.italic {
-  font-style: italic !important;
-}
-em {
- font-style: italic; 
-}
-em.blacken {
-  background: $black;
-  color: $white;
-  font-family: $sans;
-  font-size: .75em;
-  font-style: normal;
-  padding: .1667em;
-}
-.lowercase {
-  text-transform: lowercase;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.large {
-  font-size: 1.5em;
-}
-small, .small {
-  font-size: .75em;
+h2, .h2 {
+  font-size: 2em;
+  font-weight: bold;
 }
 
-/******************************
-Lists
-******************************/
-ol, 
-ul {
-  padding: 0;
-  &.inline {
-    list-style: none;
-    margin-left: 0;
-    li {
-      display: inline-block;
-      *display: inline;
-      *zoom: 1;
-    }
-  }
-  &.unstyled {
-    list-style: disc;
-    margin-left: 0;
-  }
-  ol, 
-  ul {
-    margin-bottom: 0;
-  }
+h3, .h3 {
+  font-size: 1.5em;
+  font-weight: bold;
 }
-ol {
-  list-style: decimal;
+
+h4 .h4 {
+  font-size: 1.17em;
+  font-weight: bold;
 }
-ul {
-  list-style: none;
+
+h5, .h5 {
+
 }
-dl {
-  margin: .5em 0;
-  dd {
-    margin-left: .5em;
-  }
-  dt {
-    font-weight: 700;
-  }
-}
-.list-title {
-  font-weight: 700;
-  margin-bottom: .25em;
+
+h6, .h6 {
+  font-size: .75em;
+  font-weight: bold;
 }
 
 /******************************
@@ -236,41 +138,3 @@ Misc
   font-style: italic;
   font-weight: normal;
 }
-
-/******************************
-SBG
-******************************/
-.sbg {
-  background: $black;
-  color: $white;
-  font-family: $sans;
-  font-weight: 100;
-  font-size: 0.75em;
-  padding: 0.1667em;
-  text-transform: uppercase;
-  .char9,
-  .char10,
-  .char11 {
-    font-weight: 700;
-  }
-}
-.c-positive {
-  display: inline-block;
-  font-weight: bold;
-  [class^="char"] {
-    display: inline-block;
-    border: 1px solid $greyMd;
-    font-family: $heading;
-    font-style: normal;
-    padding: .125em;
-    margin: 0 .015em;
-  }
-}
-.c-negative {
-  color: $red;
-  font-family: $serif;
-  font-style: italic;
-  font-weight: normal;
-  padding: .125em;
-}
-

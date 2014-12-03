@@ -7,8 +7,7 @@ Base
 a, .link,
 a:visited, .link:visited {
   border-bottom: 1px solid transparent;
-  color: $yellow;
-  @include transition(all $transition-static);
+  color: $green;
   text-decoration: none;
   &:active,
   &:hover {

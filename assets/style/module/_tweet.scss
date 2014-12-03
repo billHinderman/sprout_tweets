@@ -1,0 +1,53 @@
+.list-tweets {
+  list-style-type: none;
+  @media screen and (min-width: $large) {
+    max-width: 54em;
+    width: 75%;
+  }
+}
+.tweet-individual {
+  background: $white;
+  box-shadow: 0px 1px 3px -1px darken($greyMd, 40%);
+  margin: 1em .5em 0;
+  padding: 1em;
+  position: relative;
+}
+.tweet-author,
+.tweet-complete-toggle,
+.tweet-content,
+.tweet-created-date,
+.tweet-profile-image, {
+  display: inline-block;
+}
+.tweet-author {
+  max-width: 2em;
+}
+.tweet-complete-toggle {
+  width: 12em;
+}
+.tweet-content {
+  width: 30em;
+}
+.tweet-created-date {
+  width: 3em;
+}
+.tweet-profile-image {
+  height: 2em;
+  width: 2em
+}
+.tweet-remove-link {
+  border: none;
+  color: darken($greyMd, 20%);
+  display: block;
+  font-size: 1.25em;
+  font-weight: bold;
+  height: 1em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 1em;
+  &:hover {
+    color: $green;
+  }
+}
