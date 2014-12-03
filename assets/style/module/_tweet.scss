@@ -1,6 +1,28 @@
+.list-tweets-head {
+  border-bottom: 2px solid $greyDk;
+  list-style-type: none;
+  margin: 1em;
+  padding-left: 7em;
+}
+.list-head-item {
+  display: inline-block;
+  font-weight: bold;
+}
+#date-toggle.list-head-item {
+  width: 3em;
+}
+#message.list-head-item {
+  width: 26em;
+}
+#name-toggle.list-head-item {
+  width: 10em;
+}
+
+
 .list-tweets {
   list-style-type: none;
   @media screen and (min-width: $large) {
+    float: right;
     max-width: 54em;
     width: 75%;
   }
@@ -20,13 +42,13 @@
   display: inline-block;
 }
 .tweet-author {
-  max-width: 2em;
+  width: 10em;
 }
 .tweet-complete-toggle {
-  width: 12em;
+  width: 8em;
 }
 .tweet-content {
-  width: 30em;
+  width: 26em;
 }
 .tweet-created-date {
   width: 3em;

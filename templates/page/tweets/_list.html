@@ -1,11 +1,17 @@
+<h2>Incoming tweets</h2>
+<ul class="list-tweets-head">
+  <li class="list-head-item toggle" id="name-toggle"><a href="#">Name</a></li>
+  <li class="list-head-item" id="message"><span>Message</span></li>
+  <li class="list-head-item toggle toggled" id="date-toggle"><a href="#">Date</a></li>
+</ul>
 <ul class="list-tweets">
   <% _.each(tweets, function(tweet){ %>
     <li class="tweet-individual" data-id="<%= tweet.get("id") %>">
       <div class="tweet-profile-image" data-bg='<%= tweet.get("profile_image_url") %>'></div>
 
-      <h3 class="tweet-author">
+      <h4 class="tweet-author">
         <a href="<%= tweet.profile_url %>" target="_blank"><%= tweet.get("screen_name") %></a>
-      </h3>
+      </h4>
 
       <p class="tweet-content"><%= tweet.get("text") %></p>
 
@@ -14,6 +20,6 @@
       <a class="tweet-complete-toggle button">asdf</a>
 
       <a class="tweet-remove-link" href="#">×</a>
-    </li> 
+    </li>
   <% }); %>
 </ul>

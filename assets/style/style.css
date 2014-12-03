@@ -834,16 +834,49 @@ submit.disabled, submit:disabled,
   width: 20em;
   z-index: 1; }
 
+#summary {
+  background: #fefefb;
+  box-shadow: 0px 1px 3px -1px #858585;
+  margin: 1em .5em;
+  padding: 1em; }
+  @media screen and (min-width: 960px) {
+    #summary {
+      float: right;
+      max-width: 26em;
+      margin: 1em 0;
+      width: 25%; } }
+
 #content {
   margin: 0 auto;
   padding: 0 2%;
+  position: relative;
   max-width: 1280px;
   width: 100%; }
+
+.list-tweets-head {
+  border-bottom: 2px solid #333333;
+  list-style-type: none;
+  margin: 1em;
+  padding-left: 7em; }
+
+.list-head-item {
+  display: inline-block;
+  font-weight: bold; }
+
+#date-toggle.list-head-item {
+  width: 3em; }
+
+#message.list-head-item {
+  width: 26em; }
+
+#name-toggle.list-head-item {
+  width: 10em; }
 
 .list-tweets {
   list-style-type: none; }
   @media screen and (min-width: 960px) {
     .list-tweets {
+      float: right;
       max-width: 54em;
       width: 75%; } }
 
@@ -862,13 +895,13 @@ submit.disabled, submit:disabled,
   display: inline-block; }
 
 .tweet-author {
-  max-width: 2em; }
+  width: 10em; }
 
 .tweet-complete-toggle {
-  width: 12em; }
+  width: 8em; }
 
 .tweet-content {
-  width: 30em; }
+  width: 26em; }
 
 .tweet-created-date {
   width: 3em; }
