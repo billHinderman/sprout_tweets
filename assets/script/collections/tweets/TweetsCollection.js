@@ -24,7 +24,7 @@ define([
     },
 
     initialize: function () {
-        this.changeSort("date");    
+      this.changeSort('date');
     }  
   });
 

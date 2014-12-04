@@ -12,6 +12,8 @@ define([
     render: function(){
       var data = {
         tweets: this.collection.models,
+        size_all: this.collection.where({'is_archived':false}).length,
+        size_completed: this.collection.where({'is_complete':true}).length,
         _: _ 
       };
       var compiledTemplate = _.template( summaryTemplate, data );

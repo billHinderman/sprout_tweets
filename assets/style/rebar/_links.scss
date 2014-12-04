@@ -6,9 +6,9 @@ Base
 ******************************/
 a, .link,
 a:visited, .link:visited {
-  border-bottom: 1px solid transparent;
   color: $green;
   text-decoration: none;
+  @include transition(all $transition-static);
   &:active,
   &:hover {
     border-color: inherit;
@@ -24,10 +24,5 @@ a:visited, .link:visited {
   &:not([href^="#"]),
   &.external {
     
-  }
-
-  &.link-no-style {
-    border: none !important;
-    color: inherit;
   }
 }

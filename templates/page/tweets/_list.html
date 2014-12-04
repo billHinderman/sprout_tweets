@@ -7,19 +7,19 @@
 <ul class="list-tweets">
   <% _.each(tweets, function(tweet){ %>
     <li class="tweet-individual" data-id="<%= tweet.get("id") %>">
-      <div class="tweet-profile-image" data-bg='<%= tweet.get("profile_image_url") %>'></div>
+      <a class="tweet-profile-image" data-bg='<%= tweet.get("profile_image_url") %>' href="<%= tweet.get("profile_url") %>" target="_blank"></a>
 
       <h4 class="tweet-author">
-        <a href="<%= tweet.profile_url %>" target="_blank"><%= tweet.get("screen_name") %></a>
+        <a href="<%= tweet.get("profile_url") %>" target="_blank"><%= tweet.get("screen_name_display") %></a>
       </h4>
 
       <p class="tweet-content"><%= tweet.get("text") %></p>
 
-      <time class="tweet-created-date" datetime="<%= tweet.get("created_at") %>"><%= tweet.get("created_at_formatted") %></time>
+      <time class="tweet-created-date" title="<%= tweet.get("created_at") %>" datetime="<%= tweet.get("created_at") %>"><%= tweet.get("created_at_formatted") %></time>
 
-      <a class="tweet-complete-toggle button">Complete</a>
+      <a class="tweet-complete-toggle button" data-id="<%= tweet.get("id") %>">Complete</a>
 
-      <a class="tweet-remove-link" href="#">×</a>
+      <a class="tweet-remove-link" data-id="<%= tweet.get("id") %>" href="#">×</a>
     </li>
   <% }); %>
 </ul>

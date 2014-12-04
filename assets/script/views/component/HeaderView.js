@@ -14,6 +14,17 @@ define([
 
     render: function(){
       this.$el.html(headerTemplate);
+      var $head = this.$el.find('[data-fill]');
+      var modifier = $head.attr('data-fill-size') ? $head.attr('data-fill-size') : 1;
+      if($head.attr('data-fill') == 'strict') {
+        $head.css({
+          "height":($(window).height())*modifier,
+          "position":"relative"});
+      } else {
+        $head.css({
+          "min-height":($(window).height())*modifier,
+          "position":"relative"});
+      }
     }
   });
 
