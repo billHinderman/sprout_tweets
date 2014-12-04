@@ -35,8 +35,8 @@ define([
     },
 
     toggleArchive: function(){
-      this.set({'is_archived': !(this.get('is_archived'))});
-      this.set({'is_complete': !(this.get('is_archived'))});
+      this.set({'is_archived': true});
+      this.set({'is_complete': false});
     },
     toggleComplete: function(){
       this.set({'is_complete': !(this.get('is_complete'))});

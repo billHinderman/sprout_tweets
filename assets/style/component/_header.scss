@@ -2,6 +2,7 @@
   display: table;
   overflow: hidden;
   width: 100%;
+  z-index: 1;
   &:after {
     content: "";
     background: url(../images/bg_head.jpg) 50% 50% / cover, $white;

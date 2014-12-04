@@ -11,8 +11,11 @@ Main
   box-sizing: border-box;
 }
 body {
-  background: $greyMd;
+  background: $black;
   color: $black;
+}
+#container {
+  background: $greyMd;
 }
 ::selection {
   background: $green;

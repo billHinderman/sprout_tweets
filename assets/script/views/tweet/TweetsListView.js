@@ -38,8 +38,10 @@ define([
       var id = $(e.target).data('id');
       var $tweet = $(e.target).parent('[data-id="'+id+'"]');
       $tweet.addClass('archived');
-
       tweets.get(id).toggleArchive();
+      setTimeout(function() {
+        $tweet.remove();
+      },1000);
     },
 
     complete_tweet: function(e) {
@@ -47,7 +49,7 @@ define([
       e.preventDefault();
       var id = $(e.target).data('id');
       var $tweet = $(e.target).parent('[data-id="'+id+'"]');
-      $tweet.addClass('complete');
+      $tweet.toggleClass('complete');
 
       tweets.get(id).toggleComplete();
     },

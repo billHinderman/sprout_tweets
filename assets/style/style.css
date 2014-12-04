@@ -66,8 +66,11 @@ Main
   box-sizing: border-box; }
 
 body {
-  background: #eeeeee;
+  background: #231f20;
   color: #231f20; }
+
+#container {
+  background: #eeeeee; }
 
 ::selection {
   background: #7ac143;
@@ -673,7 +676,8 @@ submit.disabled, submit:disabled,
 .header-content {
   display: table;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
   .header-content:after {
     content: "";
     background: url(../images/bg_head.jpg) 50% 50%/cover, #fefefb;
@@ -784,17 +788,21 @@ submit.disabled, submit:disabled,
 
 @media screen and (min-width: 1024px) {
   .summary-list {
-    line-height: 1.5em;
     font-size: 1.25em; }
     .summary-list dd {
       color: #1d67a7; } }
 .summary-list dd {
   float: left;
-  font-weight: bold; }
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: bold;
+  vertical-align: middle; }
 .summary-list dt {
   clear: left;
   float: left;
-  padding-right: .125em; }
+  line-height: 2.5em;
+  vertical-align: middle;
+  width: 9em; }
 
 .summary-toggle {
   margin-top: 1em; }
@@ -814,9 +822,7 @@ submit.disabled, submit:disabled,
   margin-top: 1em; }
   @media screen and (min-width: 1024px) {
     .list-tweets-head {
-      float: right;
-      max-width: 52em;
-      width: 75%; } }
+      float: right; } }
 
 .list-head-item {
   display: inline-block;
@@ -830,13 +836,24 @@ submit.disabled, submit:disabled,
   color: #231f20; }
 
 #date-toggle.list-head-item {
-  width: 3em; }
+  width: 15.5em; }
 
-#message.list-head-item {
-  width: 26em; }
+@media screen and (min-width: 768px) {
+  #message.list-head-item {
+    margin: 0;
+    width: 18em; } }
+@media screen and (min-width: 960px) {
+  #message.list-head-item {
+    width: 22em; } }
+@media screen and (min-width: 1024px) {
+  #message.list-head-item {
+    width: 18em; } }
+@media screen and (min-width: 1280px) {
+  #message.list-head-item {
+    width: 24em; } }
 
 #name-toggle.list-head-item {
-  width: 10em; }
+  width: 8.5em; }
 
 .list-tweets {
   list-style-type: none; }
@@ -851,8 +868,15 @@ submit.disabled, submit:disabled,
   border-radius: 3px;
   box-shadow: 0px 1px 3px -1px #888888;
   margin: 1em .5em 0;
+  max-height: 10em;
+  overflow: hidden;
   padding: 1em;
-  position: relative; }
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
 
 .tweet-author,
 .tweet-content,
@@ -906,6 +930,7 @@ submit.disabled, submit:disabled,
       margin: 0 0 0 .25em; } }
 
 .tweet-profile-image {
+  border-radius: 3px;
   display: inline-block;
   height: 3em;
   margin-right: .25em;
@@ -930,6 +955,16 @@ submit.disabled, submit:disabled,
   text-align: center;
   top: 0;
   width: 1em; }
+
+.tweet-individual.archived,
+#tweet-list.complete-hide .tweet-individual.complete {
+  margin-top: 0;
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  -moz-transform: scale(0.95, 0.95);
+  -webkit-transform: scale(0.95, 0.95);
+  transform: scale(0.95, 0.95); }
 
 .tweet-individual.complete {
   background: #f9f9e7; }

@@ -6,8 +6,6 @@
   margin-top: 1em;
    @media screen and (min-width: $large) {
     float: right;
-    max-width: 52em;
-    width: 75%;
   }
 }
 .list-head-item {
@@ -24,13 +22,25 @@
   color: $black;
 }
 #date-toggle.list-head-item {
-  width: 3em;
+  width: 15.5em;
 }
 #message.list-head-item {
-  width: 26em;
+  @media screen and (min-width: $medium) {
+    margin: 0;
+    width: 18em;
+  }
+  @media screen and (min-width: $m-l) {
+    width: 22em;
+  }
+  @media screen and (min-width: $large) {
+    width: 18em;
+  }
+  @media screen and (min-width: $xl) {
+    width: 24em;
+  }
 }
 #name-toggle.list-head-item {
-  width: 10em;
+  width: 8.5em;
 }
 
 
@@ -47,8 +57,11 @@
   border-radius: 3px;
   box-shadow: 0px 1px 3px -1px darken($greyMd, 40%);
   margin: 1em .5em 0;
+  max-height: 10em;
+  overflow: hidden;
   padding: 1em;
   position: relative;
+  @include transition(all $transition-static);
 }
 .tweet-author,
 .tweet-content,
@@ -99,6 +112,7 @@
   }
 }
 .tweet-profile-image {
+  border-radius: 3px;
   display: inline-block;
   height: 3em;
   margin-right: .25em;
@@ -123,6 +137,17 @@
   text-align: center;
   top: 0;
   width: 1em;
+}
+
+.tweet-individual.archived,
+#tweet-list.complete-hide .tweet-individual.complete {
+  margin-top: 0;
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  -moz-transform: scale(.95,.95);
+  -webkit-transform: scale(.95,.95);
+  transform: scale(.95,.95);
 }
 
 .tweet-individual.complete {

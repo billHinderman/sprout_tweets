@@ -70,7 +70,6 @@
 }
 .summary-list {
   @media screen and (min-width: $large) {
-    line-height: 1.5em;
     font-size: 1.25em;
     dd {
       color: $blue;
@@ -79,12 +78,17 @@
 
   dd {
     float: left;
+    font-size: 2em;
+    line-height: 1.25em;
     font-weight: bold;
+    vertical-align: middle;
   }
   dt {
     clear: left;
     float: left;
-    padding-right: .125em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    width: 9em;
   }
 }
 
