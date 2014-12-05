@@ -405,7 +405,7 @@ body {
 Font Options
 ******************************/
 .f-heading {
-  font-family: "Proxima Nova", "nimbus-sans", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .f-mono {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
