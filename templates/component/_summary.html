@@ -1,16 +1,7 @@
-<h3 class="summary-header">Summary</h3>
-
 <dl class="summary-list float-clear">
   <dt>Total tweets:</dt>
-  <dd><%= size_all %></dd>
+  <dd id="tweets-total"><%= size_all %></dd>
 
   <dt>Completed tweets:</dt>
-  <dd><%= size_completed %></dd>
+  <dd id="tweets-complete"><%= size_completed %></dd>
 </dl>
-
-<div class="summary-toggle">
-  <a class="toggle on" href="#">
-    <span class="toggle-option on">Show</span>
-    <span class="toggle-option off">Hide</span>
-  </a> completed items.
-</div>

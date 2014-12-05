@@ -11,14 +11,17 @@ define([
 
   var TweetsView = Backbone.View.extend({
     el: $("#content"),
+    
+    events: {
+      'click .summary-toggle .toggle' : 'toggleView'
+    },
 
     render: function() {
       this.$el.html(tweetsTemplate);
 
       tweetsCollection = new TweetsCollection();
-      tweetsCollection.fetch();
-      tweetsCollection.bind('reset', function () { 
-        var tweetsListView = new TweetsListView({collection: tweetsCollection});
+      tweetsCollection.fetch().complete(function() {
+          var tweetsListView = new TweetsListView({collection: tweetsCollection});
         tweetsListView.render();
 
         var summaryView = new SummaryView({collection: tweetsCollection});
@@ -27,7 +30,7 @@ define([
 
       tweetsCollection.bind('sort', function () { 
         var tweetsListView = new TweetsListView({collection: tweetsCollection});
-        tweetsListView.render();
+        tweetsListView.render();  
       });
 
       tweetsCollection.bind('change', function () { 
@@ -35,6 +38,12 @@ define([
         summaryView.render();
       });
     },
+    
+    toggleView: function(e) {
+      e.preventDefault();
+      $('.summary-toggle .toggle').toggleClass('on off');
+      $('#tweet-list').toggleClass('complete-hide');
+    }
   });
 
   return TweetsView;

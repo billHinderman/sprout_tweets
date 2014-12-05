@@ -8,6 +8,8 @@ define([
 ], function($, _, Backbone, TweetModel, TweetsCollection, summaryTemplate){
 
   var SummaryView = Backbone.View.extend({
+    el: $("#content"),
+
 
     render: function(){
       var data = {
@@ -18,7 +20,8 @@ define([
       };
       var compiledTemplate = _.template( summaryTemplate, data );
       $('#summary').html(compiledTemplate);
-    }
+    },
+
   });
 
   return SummaryView;

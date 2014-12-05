@@ -21,6 +21,7 @@ define([
     },
     changeSort: function (sortProperty) {
       this.comparator = this.strategies[sortProperty];
+      this.trigger('sort');
     },
 
     initialize: function () {

@@ -597,7 +597,7 @@ submit.disabled, submit:disabled,
 
 .toggle {
   background: #fefefb;
-  border: 1px solid #4d4d4d;
+  border: 1px solid #fefefb;
   border-radius: .83em;
   display: inline-block;
   font-size: .83em;
@@ -721,20 +721,20 @@ submit.disabled, submit:disabled,
   font-size: .83em;
   padding: 1em 2em; }
 
-#summary {
+.summary-info {
   background: #7ac143;
   color: #fefefb;
   font-weight: 100;
   margin: 0 -1em 1em;
   padding: 1em;
   text-align: center; }
-  #summary .summary-header,
-  #summary .summary-list {
+  .summary-info .summary-header,
+  .summary-info .summary-list {
     display: inline-block;
     text-align: center;
     vertical-align: middle; }
   @media screen and (min-width: 1024px) {
-    #summary {
+    .summary-info {
       background: #fefefb;
       color: #231f20;
       border-radius: 3px;
@@ -744,8 +744,8 @@ submit.disabled, submit:disabled,
       max-width: 26em;
       margin: 7em 0 0;
       width: 25%; }
-      #summary .summary-header,
-      #summary .summary-list {
+      .summary-info .summary-header,
+      .summary-info .summary-list {
         display: block;
         text-align: left; } }
 
@@ -868,7 +868,7 @@ submit.disabled, submit:disabled,
   border-radius: 3px;
   box-shadow: 0px 1px 3px -1px #888888;
   margin: 1em .5em 0;
-  max-height: 10em;
+  max-height: 20em;
   overflow: hidden;
   padding: 1em;
   position: relative;
