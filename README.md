@@ -29,19 +29,18 @@ Show/hide completed tweet toggle defaults to 'on' so that completed tweets can m
 2. Technologies used
 ---
 
-* BackboneJS
-* jQuery
-* RequireJS
-* UnderscoreJS
-* SASS
-* Typekit
-
+#### BackboneJS
+#### jQuery
+#### RequireJS
+#### UnderscoreJS
+#### SASS
+#### Typekit
 
 
 3. Next steps
 ---
 
-Did not deliver the following functionality (in priority order):
+#### Deliver the following enhancements (in priority order):
 * Sort list by name/date by toggling list labels.
 * Persist changes to backing data on page reoad.
 
