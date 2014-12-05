@@ -17,8 +17,8 @@ Sprout Tweets List
 ---
 
 ### Assets
-
 #### Images
+
 
 #### Script
 ##### Collections
@@ -29,11 +29,14 @@ Sprout Tweets List
 ##### Component
 ##### Tweet
 
+
 #### Style
 ##### Component
-###### Module
+##### Module
 ##### Rebar
 
+
 ### Templates
+
 #### Component
 #### Page    
