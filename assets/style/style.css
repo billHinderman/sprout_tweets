@@ -728,6 +728,7 @@ submit.disabled, submit:disabled,
   margin: 0 -1em 1em;
   padding: 1em;
   text-align: center; }
+  .summary-info #summary,
   .summary-info .summary-header,
   .summary-info .summary-list {
     display: inline-block;
@@ -744,12 +745,13 @@ submit.disabled, submit:disabled,
       max-width: 26em;
       margin: 7em 0 0;
       width: 25%; }
+      .summary-info #summary,
       .summary-info .summary-header,
       .summary-info .summary-list {
         display: block;
         text-align: left; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .summary-header {
     border-right: 1px solid #fefefb;
     padding-right: 1em;
@@ -801,8 +803,8 @@ submit.disabled, submit:disabled,
   clear: left;
   float: left;
   line-height: 2.5em;
-  vertical-align: middle;
-  width: 9em; }
+  padding-right: 1em;
+  vertical-align: middle; }
 
 .summary-toggle {
   margin-top: 1em; }
@@ -818,8 +820,12 @@ submit.disabled, submit:disabled,
   margin-top: 1em; }
 
 .list-tweets-head {
+  display: none;
   list-style-type: none;
   margin-top: 1em; }
+  @media screen and (min-width: 768px) {
+    .list-tweets-head {
+      display: block; } }
   @media screen and (min-width: 1024px) {
     .list-tweets-head {
       float: right; } }
@@ -907,6 +913,7 @@ submit.disabled, submit:disabled,
   width: 8.5em; }
 
 .tweet-content {
+  line-height: 1.3em;
   margin: 1em 0; }
   @media screen and (min-width: 768px) {
     .tweet-content {

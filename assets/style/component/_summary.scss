@@ -5,6 +5,7 @@
   margin: 0 -1em 1em;
   padding: 1em;
   text-align: center;
+  #summary,
   .summary-header,
   .summary-list{
     display: inline-block;
@@ -21,6 +22,7 @@
     max-width: 26em;
     margin: 7em 0 0;
     width: 25%;
+    #summary,
     .summary-header,
     .summary-list{
       display: block;
@@ -29,7 +31,7 @@
   }
 }
 .summary-header {
-  @media screen and (max-width: $large) {
+  @media screen and (max-width: 1023px) { //$large - 1
     border-right: 1px solid $white;
     padding-right: 1em;
     margin-right: 1em;
@@ -87,8 +89,8 @@
     clear: left;
     float: left;
     line-height: 2.5em;
+    padding-right: 1em;
     vertical-align: middle;
-    width: 9em;
   }
 }
 

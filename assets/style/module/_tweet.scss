@@ -2,9 +2,13 @@
   margin-top: 1em;
 }
 .list-tweets-head {
+  display: none;
   list-style-type: none;
   margin-top: 1em;
-   @media screen and (min-width: $large) {
+  @media screen and (min-width: $medium) {
+    display: block;
+  }
+  @media screen and (min-width: $large) {
     float: right;
   }
 }
@@ -89,6 +93,7 @@
   width: 8.5em;
 }
 .tweet-content {
+  line-height: 1.3em;
   margin: 1em 0;
   @media screen and (min-width: $medium) {
     margin: 0;

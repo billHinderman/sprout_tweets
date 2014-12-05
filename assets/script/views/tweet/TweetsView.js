@@ -6,7 +6,7 @@ define([
   '../../collections/tweets/TweetsCollection.js',
   '../../views/tweet/TweetsListView.js',
   '../../views/component/SummaryView.js',
-  'text!templates/page/tweets/_single.html'
+  'text!templates/page/tweets/_page_container.html'
 ], function($, _, Backbone, TweetModel, TweetsCollection, TweetsListView, SummaryView, tweetsTemplate){
 
   var TweetsView = Backbone.View.extend({
