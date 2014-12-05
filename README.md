@@ -20,6 +20,9 @@ Summary section, rather than sitting next to the tweets list (as per wireframe),
 #### 1/3 height page header
 Page header added to increase likelihood that user won't begin to scroll past important content before it finishes loading.
 
+#### Default profile icon
+Some icons were not coming back.  Set fallback background image as Sprout logo, rather than whitespace on card.
+
 #### Date changed to human-readable
 Date element in tweet has been replaced with a human-readable version within a <time> tag.  Machine-readable datetime attribute and hoverable title attribute hold the full datetime given by the JSON.
 
