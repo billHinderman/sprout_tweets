@@ -564,7 +564,7 @@ submit.disabled, submit:disabled,
     .summary-list dd {
       color: #1d67a7; } }
 .summary-list dd {
-  float: left;
+  float: right;
   font-size: 2em;
   line-height: 1.25em;
   font-weight: bold;
