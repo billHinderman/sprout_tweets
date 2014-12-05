@@ -10,7 +10,9 @@ define([
     el: $("#content"),
 
     events: {
-      'click #tweet-list .tweet-remove-link' : 'archive_tweet',
+      'click #tweet-list .tweet-remove-link' : 'attempt_archive_tweet',
+      'click #tweet-list .remove-button.button-yes' : 'archive_tweet',
+      'click #tweet-list .remove-button.button-no' : 'nevermind_archive_tweet',
       'click #tweet-list .tweet-complete-toggle' : 'complete_tweet',
     },
 
@@ -32,11 +34,18 @@ define([
       });
     },
 
+    attempt_archive_tweet: function(e) {
+      e.preventDefault();
+      var id = $(e.target).data('id');
+      var $tweet = $(e.target).parent('.tweet-individual[data-id="'+id+'"]');
+      $tweet.addClass('archive-attempt');
+    },
+
     archive_tweet: function(e) {
       var tweets = this.collection;
       e.preventDefault();
       var id = $(e.target).data('id');
-      var $tweet = $(e.target).parent('[data-id="'+id+'"]');
+      var $tweet = $('.tweet-individual[data-id="'+id+'"]');
       $tweet.addClass('archived');
       tweets.get(id).toggleArchive();
       setTimeout(function() {
@@ -44,12 +53,24 @@ define([
       },1000);
     },
 
+    nevermind_archive_tweet: function(e) {
+      e.preventDefault();
+      var id = $(e.target).data('id');
+      var $tweet = $('.tweet-individual[data-id="'+id+'"]');
+      $tweet.removeClass('archive-attempt');
+    },
+
     complete_tweet: function(e) {
       var tweets = this.collection;
       e.preventDefault();
       var id = $(e.target).data('id');
-      var $tweet = $(e.target).parent('[data-id="'+id+'"]');
+      var $tweet = $('.tweet-individual[data-id="'+id+'"]');
       $tweet.toggleClass('complete');
+      if($tweet.hasClass('complete')) {
+        $(e.target).text('Complete');
+      } else {
+        $(e.target).text('Incomplete');
+      }
 
       tweets.get(id).toggleComplete();
     },

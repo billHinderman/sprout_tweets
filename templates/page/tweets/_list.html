@@ -1,9 +1,3 @@
-<h2>Incoming tweets</h2>
-<ul class="list-tweets-head">
-  <li class="list-head-item" id="name-toggle"><a href="#">Name</a></li>
-  <li class="list-head-item" id="message"><span>Message</span></li>
-  <li class="list-head-item" id="date-toggle"><a href="#">Date</a></li>
-</ul>
 <ul class="list-tweets">
   <% _.each(tweets, function(tweet){ %>
     <li class="tweet-individual" data-id="<%= tweet.get("id") %>">
@@ -17,9 +11,16 @@
 
       <time class="tweet-created-date" title="<%= tweet.get("created_at") %>" datetime="<%= tweet.get("created_at") %>"><%= tweet.get("created_at_formatted") %></time>
 
-      <a class="tweet-complete-toggle button" data-id="<%= tweet.get("id") %>">Complete</a>
+      <a class="tweet-complete-toggle button" data-id="<%= tweet.get("id") %>">Incomplete</a>
 
       <a class="tweet-remove-link" data-id="<%= tweet.get("id") %>" href="#">×</a>
+
+      <div class="tweet-remove">
+        <p>Are you sure you want to archive this tweet?</p>
+        <a class="button remove-button button-yes" data-id="<%= tweet.get("id") %>" href="#">Archive</a>
+        <a class="button remove-button button-no" data-id="<%= tweet.get("id") %>" href="#">No</a>
+      </div>
+      </div>
     </li>
   <% }); %>
 </ul>

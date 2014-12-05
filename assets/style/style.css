@@ -814,8 +814,8 @@ submit.disabled, submit:disabled,
   max-width: 1280px;
   width: 100%; }
 
-#tweet-list {
-  margin-top: 2em; }
+.tweet-list-head {
+  margin-top: 1em; }
 
 .list-tweets-head {
   list-style-type: none;
@@ -866,9 +866,11 @@ submit.disabled, submit:disabled,
 .tweet-individual {
   background: #fefefb;
   border-radius: 3px;
+  border-left: 0 solid #1d67a7;
   box-shadow: 0px 1px 3px -1px #888888;
   margin: 1em .5em 0;
   max-height: 20em;
+  min-height: 5.5em;
   overflow: hidden;
   padding: 1em;
   position: relative;
@@ -902,7 +904,7 @@ submit.disabled, submit:disabled,
   bottom: 0;
   position: absolute;
   right: 1em;
-  width: 8em; }
+  width: 8.5em; }
 
 .tweet-content {
   margin: 1em 0; }
@@ -960,6 +962,7 @@ submit.disabled, submit:disabled,
 #tweet-list.complete-hide .tweet-individual.complete {
   margin-top: 0;
   max-height: 0;
+  min-height: 0;
   padding: 0;
   opacity: 0;
   -moz-transform: scale(0.95, 0.95);
@@ -967,7 +970,48 @@ submit.disabled, submit:disabled,
   transform: scale(0.95, 0.95); }
 
 .tweet-individual.complete {
-  background: #f9f9e7; }
+  border-left-width: .5em;
+  padding-left: .5em; }
+  .tweet-individual.complete .tweet-author a {
+    color: #629d34; }
+  .tweet-individual.complete .tweet-remove {
+    left: .5em; }
+  .tweet-individual.complete .tweet-complete-toggle {
+    background: #1d67a7; }
+    .tweet-individual.complete .tweet-complete-toggle:hover {
+      background: #154c7c; }
+
+.tweet-individual.archive-attempt .tweet-remove {
+  opacity: 1;
+  z-index: 1; }
+
+.tweet-individual.archive-attempt .tweet-remove-link {
+  display: none; }
+
+.tweet-remove {
+  background: #fefefb;
+  bottom: 1em;
+  left: 1em;
+  opacity: 0;
+  position: absolute;
+  right: 1em;
+  text-align: right;
+  top: 1em;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+.remove-button {
+  display: inline-block;
+  margin: .25em 0 0 .5em; }
+
+.button.button-no {
+  background: #ee3388; }
+  .button.button-no:hover {
+    background: #dc126e; }
 
 .tweet-individual:hover .tweet-remove-link {
   color: #4d4d4d; }
