@@ -1,6 +1,0 @@
-// @codekit-append "_background.js"
-// @codekit-append "_collapse.js"
-// @codekit-append "_fill.js"
-/* **********************************************
-     Begin _background.js
-********************************************** */jQuery(document).ready(function(e){e("*[data-bg]").each(function(){e(this).css({background:"url('"+e(this).data("bg-image")+"')","background-position":"center","background-size":"cover"})})});jQuery(document).ready(function(e){e("*[data-collapse]").each(function(){var t=e(this),n=t.children("*[data-collapse-trigger]");n.on("click",function(e){e.preventDefault();t.toggleClass("collapsed");n.children(".icon-plus")[0]!=null?n.children(".icon-plus").removeClass("icon-plus").addClass("icon-minus"):n.children(".icon-minus")[0]!=null&&n.children(".icon-minus").removeClass("icon-minus").addClass("icon-plus")})})});jQuery(document).ready(function(e){e(window).on("resize",function(){e("*[data-fill]").each(function(){var t=e(this).attr("data-fill-size")?e(this).attr("data-fill-size"):1;e(this).attr("data-fill")=="strict"?e(this).css({height:e(window).height()*t,position:"relative"}):e(this).css({"min-height":e(window).height()*t,position:"relative"})})});e(window).resize()});

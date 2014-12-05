@@ -725,6 +725,7 @@ submit.disabled, submit:disabled,
   background: #7ac143;
   color: #fefefb;
   font-weight: 100;
+  font-size: 1em;
   margin: 0 -1em 1em;
   padding: 1em;
   text-align: center; }
