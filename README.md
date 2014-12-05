@@ -16,24 +16,24 @@ Sprout Tweets List
 3. Directory structure
 ---
 
-- Assets
+### Assets
 
--- Images
+#### Images
 
--- Script
---- Collections
---- Lib
---- Models
---- Rebar
---- Views
----- Component
----- Tweet
+#### Script
+##### Collections
+##### Lib
+##### Models
+##### Rebar
+##### Views
+##### Component
+##### Tweet
 
--- Style
--- Component
---- Module
---- Rebar
+#### Style
+##### Component
+###### Module
+##### Rebar
 
-- Templates
--- Component
--- Page    
+### Templates
+#### Component
+#### Page    
