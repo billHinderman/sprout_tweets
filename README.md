@@ -1,4 +1,4 @@
-Sprout Tweets List
+Sprout Social Tweets Inbox
 =============
 
 1. Deviations from wireframe
